@@ -11,6 +11,8 @@ This repository organizes our farm records into four sections:
 
 Use this repository to find any farm document. Click a folder to explore.
 
+**📚 New to this repository?** Start with the [Documentation Hub](./docs/) for tutorials, how-to guides, and reference materials.
+
 ---
 
 ## Quick Links
