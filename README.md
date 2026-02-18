@@ -11,6 +11,16 @@ This repository organizes our farm records into four sections:
 
 Use this repository to find any farm document. Click a folder to explore.
 
+## New to This Repository?
+
+👉 **Start with the [Getting Started Guide](./docs/getting-started.md)** for setup and basic workflows.
+
+**Key Documentation:**
+- 📖 [Getting Started](./docs/getting-started.md) - First steps and common workflows
+- 🏷️ [Labels Guide](./docs/labels-guide.md) - Using labels to organize work
+- 🤖 [Automation Overview](./docs/automation-overview.md) - Understanding automated workflows
+- ⚙️ [Workflow Reference](./docs/workflow-reference.md) - Technical workflow documentation
+
 ---
 
 ## Quick Links
