@@ -99,6 +99,95 @@ uses: zircote/.github/.github/workflows/reusable-dependabot-automerge.yml@main
 
 ---
 
+### Dependabot Configuration
+
+**File:** `.github/dependabot.yml`
+
+Configures how Dependabot monitors and updates dependencies.
+
+**Current Configuration:**
+
+````yaml
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    reviewers:
+      - "zircote"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+````
+
+**What it monitors:**
+
+- **GitHub Actions** - Workflow action versions in `.github/workflows/`
+
+**Schedule:**
+- Checks for updates every Monday at 9:00 AM Central Time
+- Creates up to 5 PRs at a time to avoid overwhelming the queue
+
+**Automatic behaviors:**
+- Groups minor and patch updates into a single PR when possible
+- Applies `dependencies` and `github-actions` labels
+- Requests review from @zircote
+- Uses conventional commit format: `chore(deps): ...`
+
+**Customization:**
+
+To add more package ecosystems (e.g., npm, pip, docker):
+
+````yaml
+updates:
+  # Existing github-actions configuration...
+  
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "npm"
+````
+
+**Supported ecosystems:**
+- `github-actions` - GitHub Actions workflows
+- `npm` - JavaScript/Node.js
+- `pip` - Python
+- `docker` - Docker images
+- `composer` - PHP
+- `maven` - Java/Maven
+- `gradle` - Java/Gradle
+- `bundler` - Ruby
+- `cargo` - Rust
+- `gomod` - Go modules
+
+**Common schedule options:**
+- `daily` - Every day
+- `weekly` - Once per week (specify day)
+- `monthly` - Once per month
+
+**Documentation:**
+- [Dependabot configuration reference](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file)
+
+---
+
 ## Agentic Workflows
 
 Agentic workflows use AI to understand context and make intelligent decisions. They are defined in Markdown files and compiled to `.lock.yml` files.
