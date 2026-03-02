@@ -221,6 +221,15 @@ Automatically merged after CI passed.
 - CI checks fail
 - Conflicts with other changes
 
+**Configuration:**
+
+Dependabot is configured in `.github/dependabot.yml` to:
+- Check for GitHub Actions updates weekly (Mondays at 9 AM Central)
+- Group minor and patch updates together
+- Apply `dependencies` and `github-actions` labels automatically
+
+See [Workflow Reference - Dependabot Configuration](./workflow-reference.md#dependabot-configuration) for details on customizing the configuration.
+
 ---
 
 ## Workflow Labels
